@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheda Cliente — Azza Studio</title>
+  <meta name="description"
+    content="Inserisci i dati necessari per predisporre correttamente il progetto, il contratto e gli aspetti amministrativi con Azza Studio.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts: stessa selezione del sito principale -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Noise overlay globale (fedele al sito principale) -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <!-- Vignette cinematica -->
+  <div class="vignette-overlay" aria-hidden="true"></div>
+
+  <!-- ============================
+       HEADER / NAV
+       ============================ -->
+  <header class="header" id="header" role="banner">
+    <nav class="nav" aria-label="Navigazione principale">
+      <a href="#" class="logo" aria-label="Azza Studio — home">
+        <img src="logo v2.PNG" alt="Azza Studio logo" class="logo-img">
+      </a>
+      <div class="header-meta">
+        <span class="header-label">Scheda Cliente</span>
+        <!-- Progress bar compatta nell'header su desktop -->
+        <div class="header-progress-wrap" aria-hidden="true">
+          <div class="header-progress-bar" id="headerProgressBar"></div>
+        </div>
+        <span class="header-progress-pct" id="headerProgressPct" aria-live="polite">0%</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================
+       STICKY SECTION INDEX (desktop)
+       ============================ -->
+  <aside class="section-index" id="sectionIndex" aria-label="Indice sezioni">
+    <nav>
+      <a href="#hero" class="si-link" data-section="hero">
+        <span class="si-dot"></span>
+        <span class="si-label">Inizio</span>
+      </a>
+      <a href="#intro" class="si-link" data-section="intro">
+        <span class="si-dot"></span>
+        <span class="si-label">Perché</span>
+      </a>
+      <a href="#tipo-cliente" class="si-link" data-section="tipo-cliente">
+        <span class="si-dot"></span>
+        <span class="si-label">Tipo &amp; Scopo</span>
+      </a>
+      <a href="#dati-anagrafici" class="si-link" data-section="dati-anagrafici">
+        <span class="si-dot"></span>
+        <span class="si-label">Anagrafica</span>
+      </a>
+      <a href="#dati-fatturazione" class="si-link" data-section="dati-fatturazione">
+        <span class="si-dot"></span>
+        <span class="si-label">Fatturazione</span>
+      </a>
+      <a href="#dati-dominio" class="si-link" data-section="dati-dominio">
+        <span class="si-dot"></span>
+        <span class="si-label">Dominio</span>
+      </a>
+      <a href="#consensi" class="si-link" data-section="consensi">
+        <span class="si-dot"></span>
+        <span class="si-label">Conferma</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ============================
+       HERO
+       ============================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-label reveal-up" style="--d:0">Azza Studio</div>
+      <h1 class="hero-title">
+        <span class="title-line reveal-clip" style="--d:1"><span>Raccolta dati</span></span>
+        <span class="title-line reveal-clip" style="--d:2"><span>cliente per</span></span>
+        <span class="title-line reveal-clip" style="--d:3"><em>avvio progetto.</em></span>
+      </h1>
+      <p class="hero-sub reveal-up" style="--d:4">
+        Inserisci i dati necessari per predisporre correttamente il progetto, il contratto e gli aspetti amministrativi.
+        Una raccolta dati chiara accelera l'avvio del lavoro e riduce ogni margine di errore.
+      </p>
+
+      <div class="hero-trust reveal-up" style="--d:5">
+        <span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          Uso riservato
+        </span>
+        <span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+          Solo finalità contrattuali
+        </span>
+        <span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          5 minuti
+        </span>
+      </div>
+
+      <div class="reveal-up" style="--d:6">
+        <a href="#tipo-cliente" class="btn btn-primary scroll-to">
+          Compila la scheda
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll reveal-up" style="--d:7" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scorri</span>
+    </div>
+  </section>
+
+  <!-- ============================
+       INTRO / PROCESSO
+       ============================ -->
+  <section class="section intro" id="intro">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">Perché questi dati</span>
+        <h2 class="section-title reveal-up">Tre motivi,<br><em>un solo form.</em></h2>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-card reveal-up" style="--d:0">
+          <div class="intro-num">01</div>
+          <h3>Identificazione</h3>
+          <p>Raccogliamo i dati anagrafici per identificare correttamente il cliente e garantire la piena validità
+            legale di ogni accordo.</p>
+        </div>
+        <div class="intro-card reveal-up" style="--d:1">
+          <div class="intro-num">02</div>
+          <h3>Contratto</h3>
+          <p>Le informazioni contrattuali permettono di predisporre documenti precisi, personalizzati e immediatamente
+            operativi.</p>
+        </div>
+        <div class="intro-card reveal-up" style="--d:2">
+          <div class="intro-num">03</div>
+          <h3>Operatività</h3>
+          <p>I dati amministrativi e di contatto consentono una gestione del progetto fluida, senza richieste ripetute o
+            rallentamenti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       FORM PRINCIPALE
+       ============================ -->
+  <section class="section form-section" id="form-section">
+    <div class="container form-container">
+
+      <!-- Riepilogo live (sidebar desktop) -->
+      <aside class="form-summary" id="formSummary" aria-label="Riepilogo dati inseriti">
+        <div class="summary-header">
+          <span class="summary-title">Riepilogo</span>
+          <div class="completion-ring" aria-hidden="true">
+            <svg viewBox="0 0 36 36" class="ring-svg">
+              <path class="ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="ring-fill" id="ringFill" stroke-dasharray="0, 100"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+            <span class="ring-pct" id="ringPct">0%</span>
+          </div>
+        </div>
+        <div class="summary-body" id="summaryBody">
+          <div class="summary-empty">I dati inseriti appariranno qui.</div>
+        </div>
+      </aside>
+
+      <!-- Form principale -->
+      <div class="form-main">
+
+        <!-- Validation summary -->
+        <div class="validation-summary" id="validationSummary" role="alert" aria-live="assertive" aria-atomic="true"
+          hidden>
+          <div class="vs-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+          </div>
+          <div class="vs-content">
+            <p class="vs-title">Correggi i seguenti campi prima di procedere:</p>
+            <ul class="vs-list" id="validationList"></ul>
+          </div>
+        </div>
+
+        <form id="clientForm" action="https://api.web3forms.com/submit" method="POST" novalidate autocomplete="on">
+
+          <!-- ============================================================
+               WEB3FORMS ACCESS KEY CONFIGURATION
+               Sostituisci il valore del campo 'value' qui sotto con la tua
+               chiave personale ottenuta da: https://web3forms.com
+               ============================================================ -->
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+          <input type="hidden" name="subject" id="emailSubject" value="Nuova scheda cliente — Azza Studio">
+          <input type="hidden" name="from_name" value="Azza Studio — Form Clienti">
+          <input type="hidden" name="botcheck" value="">
+
+          <!-- ===========================
+               BLOCCO A: TIPO CLIENTE + SCOPO
+               =========================== -->
+          <div class="form-block" id="tipo-cliente">
+            <div class="block-header">
+              <span class="block-num">A</span>
+              <div>
+                <h2 class="block-title">Tipo di cliente e finalità</h2>
+                <p class="block-desc">Indica chi sei e con quale scopo utilizzi i servizi. I campi si adatteranno automaticamente.</p>
+              </div>
+            </div>
+
+            <!-- Tipo cliente -->
+            <p class="fields-section-label">Tipo di cliente <span class="required-mark" aria-label="campo obbligatorio">*</span></p>
+            <fieldset class="segmented-control" aria-label="Tipo cliente" role="radiogroup">
+              <legend class="sr-only">Seleziona il tipo di cliente</legend>
+              <label class="segment-option">
+                <input type="radio" name="tipo_cliente" value="Persona fisica" id="tipo_fisica">
+                <span class="segment-label">
+                  <span class="segment-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                  </span>
+                  <span class="segment-text">Persona fisica</span>
+                </span>
+              </label>
+              <label class="segment-option">
+                <input type="radio" name="tipo_cliente" value="Azienda / Attività / Studio" id="tipo_azienda">
+                <span class="segment-label">
+                  <span class="segment-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <rect x="2" y="7" width="20" height="14" rx="2" />
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                    </svg>
+                  </span>
+                  <span class="segment-text">Azienda / Attività / Studio</span>
+                </span>
+              </label>
+              <label class="segment-option">
+                <input type="radio" name="tipo_cliente" value="Associazione / Impresa / Società" id="tipo_associazione">
+                <span class="segment-label">
+                  <span class="segment-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  </span>
+                  <span class="segment-text">Associazione / Impresa / Società</span>
+                </span>
+              </label>
+            </fieldset>
+            <div class="field-error" id="tipo_cliente_error" role="alert" hidden></div>
+
+            <!-- Scopo del servizio -->
+            <div class="scopo-divider"></div>
+            <p class="fields-section-label">Finalità del servizio <span class="required-mark" aria-label="campo obbligatorio">*</span></p>
+            <fieldset class="segmented-control segmented-scopo" aria-label="Scopo del servizio" role="radiogroup">
+              <legend class="sr-only">Seleziona la finalità del servizio</legend>
+              <label class="segment-option">
+                <input type="radio" name="scopo_servizio" value="Consumatore privato" id="scopo_privato">
+                <span class="segment-label">
+                  <span class="segment-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                  </span>
+                  <span class="segment-text">Consumatore privato</span>
+                </span>
+              </label>
+              <label class="segment-option">
+                <input type="radio" name="scopo_servizio" value="Professionale / Imprenditoriale" id="scopo_professionale">
+                <span class="segment-label">
+                  <span class="segment-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <path d="M8 21h8M12 17v4" />
+                    </svg>
+                  </span>
+                  <span class="segment-text">Professionale / Imprenditoriale</span>
+                </span>
+              </label>
+            </fieldset>
+            <div class="field-error" id="scopo_servizio_error" role="alert" hidden></div>
+          </div>
+
+          <!-- ===========================
+               BLOCCO B: DATI ANAGRAFICI
+               =========================== -->
+          <div class="form-block" id="dati-anagrafici">
+            <div class="block-header">
+              <span class="block-num">B</span>
+              <div>
+                <h2 class="block-title">Dati anagrafici e identificativi</h2>
+                <p class="block-desc">Informazioni necessarie per l'identificazione legale e la corretta intestazione del contratto.</p>
+              </div>
+            </div>
+
+            <div class="fields-grid">
+
+              <!-- Nome / Ragione sociale — condizionale -->
+              <div class="field-wrap field-full show-persona" id="wrap_nome_cognome">
+                <label class="field-label" for="nome_cognome">
+                  Nome e cognome <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Inserisci il tuo nome e cognome completi per l'intestazione legale della scheda e dei contratti.">i</button>
+                </label>
+                <input class="field-input" type="text" id="nome_cognome" name="nome_cognome" autocomplete="name"
+                  placeholder="Es. Marco Rossi">
+                <div class="field-error" id="nome_cognome_error" role="alert" hidden></div>
+              </div>
+
+              <div class="field-wrap field-full show-entity hidden-field" id="wrap_ragione_sociale">
+                <label class="field-label" for="ragione_sociale">
+                  Ragione sociale <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="La denominazione legale ufficiale completa della tua ditta, azienda, studio o società.">i</button>
+                </label>
+                <input class="field-input" type="text" id="ragione_sociale" name="ragione_sociale"
+                  autocomplete="organization" placeholder="Es. Studio Rossi S.r.l.">
+                <div class="field-error" id="ragione_sociale_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Codice Fiscale -->
+              <div class="field-wrap">
+                <label class="field-label" for="codice_fiscale">
+                  Codice fiscale <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="16 caratteri alfanumerici. Per enti corrisponde al codice fiscale del legale rappresentante.">i</button>
+                </label>
+                <input class="field-input" type="text" id="codice_fiscale" name="codice_fiscale" autocomplete="off"
+                  placeholder="RSSMRC80A01H501U" maxlength="16" inputmode="text" autocapitalize="characters">
+                <p class="field-hint">16 caratteri alfanumerici</p>
+                <div class="field-error" id="codice_fiscale_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Email principale -->
+              <div class="field-wrap">
+                <label class="field-label" for="email_principale">
+                  Email principale <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="L'indirizzo email di riferimento per tutte le comunicazioni operative con Azza Studio.">i</button>
+                </label>
+                <input class="field-input" type="email" id="email_principale" name="email_principale"
+                  autocomplete="email" placeholder="nome@esempio.com" inputmode="email">
+                <div class="field-error" id="email_principale_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Telefono -->
+              <div class="field-wrap">
+                <label class="field-label" for="telefono">
+                  Numero di telefono <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Numero telefonico principale (cellulare o fisso) per contatti diretti rapidi.">i</button>
+                </label>
+                <input class="field-input" type="tel" id="telefono" name="telefono" autocomplete="tel"
+                  placeholder="+39 333 1234567" inputmode="tel">
+                <div class="field-error" id="telefono_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Residenza (persona fisica) -->
+              <div class="field-wrap field-full show-persona hidden-field" id="wrap_residenza">
+                <label class="field-label" for="residenza">
+                  Residenza completa <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="L'indirizzo di residenza fiscale ufficiale completo (via, numero, CAP, città, provincia) a cui intestare il contratto.">i</button>
+                </label>
+                <input class="field-input" type="text" id="residenza" name="residenza" autocomplete="street-address"
+                  placeholder="Via Roma 1, 20100 Milano (MI)">
+                <div class="field-error" id="residenza_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Sede legale (ente) -->
+              <div class="field-wrap field-full show-entity hidden-field" id="wrap_sede_legale">
+                <label class="field-label" for="sede_legale">
+                  Sede legale completa <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="L'indirizzo di sede legale ufficiale completo registrato alla Camera di Commercio (via, numero, CAP, città, provincia).">i</button>
+                </label>
+                <input class="field-input" type="text" id="sede_legale" name="sede_legale" autocomplete="off"
+                  placeholder="Via Roma 1, 20100 Milano (MI)">
+                <div class="field-error" id="sede_legale_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Legale rappresentante (ente) -->
+              <div class="field-wrap show-entity hidden-field" id="wrap_legale_rappresentante">
+                <label class="field-label" for="legale_rappresentante">
+                  Nome del legale rappresentante <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="La persona fisica legalmente autorizzata a firmare contratti per conto della società o ente.">i</button>
+                </label>
+                <input class="field-input" type="text" id="legale_rappresentante" name="legale_rappresentante"
+                  autocomplete="name" placeholder="Es. Marco Rossi">
+                <div class="field-error" id="legale_rappresentante_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Qualifica firmatario (ente) -->
+              <div class="field-wrap show-entity hidden-field" id="wrap_qualifica_firmatario">
+                <label class="field-label" for="qualifica_firmatario">
+                  Qualifica del firmatario <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="La carica ufficiale ricoperta dal firmatario del contratto (es. Titolare, Amministratore Delegato, Presidente).">i</button>
+                </label>
+                <input class="field-input" type="text" id="qualifica_firmatario" name="qualifica_firmatario"
+                  autocomplete="off" placeholder="Es. Amministratore Delegato, Presidente">
+                <div class="field-error" id="qualifica_firmatario_error" role="alert" hidden></div>
+              </div>
+
+              <!-- PEC -->
+              <div class="field-wrap">
+                <label class="field-label" for="pec">
+                  PEC <span class="optional-mark">(se presente)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Posta Elettronica Certificata. Equivale legalmente a una raccomandata con ricevuta di ritorno. Consigliata.">i</button>
+                </label>
+                <input class="field-input" type="email" id="pec" name="pec" autocomplete="off" placeholder="nome@pec.it"
+                  inputmode="email">
+                <div class="field-error" id="pec_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Data di nascita (persona fisica) -->
+              <div class="field-wrap show-persona hidden-field" id="wrap_data_nascita">
+                <label class="field-label" for="data_nascita">
+                  Data di nascita <span class="optional-mark">(per identificazione certa)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="La tua data di nascita completa, utile a fini fiscali e di identificazione univoca per il contratto.">i</button>
+                </label>
+                <input class="field-input" type="date" id="data_nascita" name="data_nascita" autocomplete="bday">
+                <div class="field-error" id="data_nascita_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Documento identità -->
+              <div class="field-wrap">
+                <label class="field-label" for="tipo_documento">
+                  Documento di identità <span class="optional-mark">(tipo)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Il tipo di documento d'identità in corso di validità che useremo per identificare formalmente l'accordo.">i</button>
+                </label>
+                <select class="field-select" id="tipo_documento" name="tipo_documento">
+                  <option value="" disabled selected>Seleziona documento</option>
+                  <option value="Carta d'identità">Carta d'identità</option>
+                  <option value="Passaporto">Passaporto</option>
+                  <option value="Patente di guida">Patente di guida</option>
+                  <option value="Permesso di soggiorno">Permesso di soggiorno</option>
+                </select>
+                <div class="field-error" id="tipo_documento_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Numero documento -->
+              <div class="field-wrap">
+                <label class="field-label" for="numero_documento">
+                  Numero documento <span class="optional-mark">(se fornito)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Il numero seriale univoco del documento d'identità selezionato.">i</button>
+                </label>
+                <input class="field-input" type="text" id="numero_documento" name="numero_documento" autocomplete="off"
+                  placeholder="Es. CA12345AA">
+                <div class="field-error" id="numero_documento_error" role="alert" hidden></div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ===========================
+               BLOCCO C: DATI DI FATTURAZIONE
+               =========================== -->
+          <div class="form-block" id="dati-fatturazione">
+            <div class="block-header">
+              <span class="block-num">C</span>
+              <div>
+                <h2 class="block-title">Dati di fatturazione</h2>
+                <p class="block-desc">Informazioni per l'emissione corretta delle fatture. I campi B2B compaiono solo se hai selezionato finalità professionale.</p>
+              </div>
+            </div>
+
+            <div class="fields-grid">
+
+              <!-- Partita IVA (condizionale professionale) -->
+              <div class="field-wrap hidden-field" id="wrap_partita_iva">
+                <label class="field-label" for="partita_iva">
+                  Partita IVA <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Codice di 11 cifre richiesto per la fatturazione elettronica tra operatori economici.">i</button>
+                </label>
+                <input class="field-input" type="text" id="partita_iva" name="partita_iva" autocomplete="off"
+                  placeholder="12345678901" maxlength="11" inputmode="numeric">
+                <p class="field-hint">11 cifre numeriche</p>
+                <div class="field-error" id="partita_iva_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Codice SDI (condizionale professionale) -->
+              <div class="field-wrap hidden-field" id="wrap_codice_sdi">
+                <label class="field-label" for="codice_sdi">
+                  Codice SDI <span class="optional-mark">(o in alternativa PEC sotto)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Codice Destinatario di 7 caratteri alfanumerici per la ricezione delle fatture elettroniche. In alternativa indicare la PEC.">i</button>
+                </label>
+                <input class="field-input" type="text" id="codice_sdi" name="codice_sdi" autocomplete="off"
+                  placeholder="XXXXXXX" maxlength="7" autocapitalize="characters">
+                <p class="field-hint">7 caratteri alfanumerici</p>
+                <div class="field-error" id="codice_sdi_error" role="alert" hidden></div>
+              </div>
+
+              <!-- PEC di fatturazione (condizionale professionale) -->
+              <div class="field-wrap hidden-field" id="wrap_pec_fatturazione">
+                <label class="field-label" for="pec_fatturazione">
+                  PEC di fatturazione <span class="optional-mark">(o in alternativa SDI sopra)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Indirizzo PEC su cui ricevere le fatture elettroniche, se non utilizzi un Codice SDI.">i</button>
+                </label>
+                <input class="field-input" type="email" id="pec_fatturazione" name="pec_fatturazione" autocomplete="off"
+                  placeholder="fatture@pec.esempio.it" inputmode="email">
+                <div class="field-error" id="pec_fatturazione_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Indirizzo di fatturazione alternativo -->
+              <div class="field-wrap field-full">
+                <label class="field-label" for="indirizzo_fatturazione">
+                  Indirizzo di fatturazione <span class="optional-mark">(se diverso dalla residenza/sede legale)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Inserisci solo se l'indirizzo a cui emettere la fattura è diverso da quello di residenza o sede legale già indicato.">i</button>
+                </label>
+                <input class="field-input" type="text" id="indirizzo_fatturazione" name="indirizzo_fatturazione"
+                  autocomplete="off" placeholder="Via Garibaldi 10, 20100 Milano (MI)">
+                <div class="field-error" id="indirizzo_fatturazione_error" role="alert" hidden></div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ===========================
+               BLOCCO D: DOMINIO, HOSTING E PROGETTO
+               =========================== -->
+          <div class="form-block" id="dati-dominio">
+            <div class="block-header">
+              <span class="block-num">D</span>
+              <div>
+                <h2 class="block-title">Dominio, hosting e progetto</h2>
+                <p class="block-desc">Dati relativi al progetto digitale e alla gestione tecnica del dominio. Lascia vuoto se non applicabile.</p>
+              </div>
+            </div>
+
+            <div class="fields-grid">
+
+              <!-- Nome commerciale / brand -->
+              <div class="field-wrap">
+                <label class="field-label" for="nome_progetto">
+                  Nome del brand o progetto <span class="optional-mark">(se da creare)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Il nome del nuovo prodotto, brand o progetto digitale su cui andremo a lavorare insieme.">i</button>
+                </label>
+                <input class="field-input" type="text" id="nome_progetto" name="nome_progetto" autocomplete="off"
+                  placeholder="Es. Aura, Noire Studio, Verdant">
+                <div class="field-error" id="nome_progetto_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Piano di progetto -->
+              <div class="field-wrap">
+                <label class="field-label" for="piano_progetto">
+                  Piano / Pacchetto richiesto
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Seleziona il pacchetto o piano di servizi desiderato per questo progetto.">i</button>
+                </label>
+                <select class="field-select" id="piano_progetto" name="piano_progetto">
+                  <option value="" disabled selected>Seleziona un piano...</option>
+                  <option value="Starter">Starter</option>
+                  <option value="Business">Business</option>
+                  <option value="Pro">Pro</option>
+                  <option value="Custom">Custom</option>
+                </select>
+                <div class="field-error" id="piano_progetto_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Sito web esistente -->
+              <div class="field-wrap">
+                <label class="field-label" for="sito_esistente">
+                  Sito web già esistente <span class="optional-mark">(se presente)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="L'indirizzo web dell'attuale sito internet se desideri un restyling o come riferimento storico per il brand.">i</button>
+                </label>
+                <input class="field-input" type="url" id="sito_esistente" name="sito_esistente" autocomplete="url"
+                  placeholder="https://www.esempio.it" inputmode="url">
+                <div class="field-error" id="sito_esistente_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Dominio richiesto -->
+              <div class="field-wrap">
+                <label class="field-label" for="dominio_richiesto">
+                  Dominio richiesto <span class="optional-mark">(se vuoi registrarne uno)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Il nome a dominio che desideri registrare o trasferire (es. miodominio.it). Lascia vuoto se hai già un dominio o non ne vuoi uno nuovo.">i</button>
+                </label>
+                <input class="field-input" type="text" id="dominio_richiesto" name="dominio_richiesto" autocomplete="off"
+                  placeholder="Es. miodominio.it">
+                <div class="field-error" id="dominio_richiesto_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Intestatario dominio -->
+              <div class="field-wrap">
+                <label class="field-label" for="intestatario_dominio">
+                  Intestatario del dominio <span class="optional-mark">(se diverso dal cliente)</span>
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Il nome a cui verrà intestato il dominio nel Whois. Di norma coincide con il cliente, ma può essere diverso (es. società vs persona fisica).">i</button>
+                </label>
+                <input class="field-input" type="text" id="intestatario_dominio" name="intestatario_dominio"
+                  autocomplete="off" placeholder="Es. Marco Rossi o Studio Rossi S.r.l.">
+                <div class="field-error" id="intestatario_dominio_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Email backup -->
+              <div class="field-wrap">
+                <label class="field-label" for="email_backup">
+                  Email di backup / recupero account
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Un indirizzo email secondario da usare per recupero accessi e notifiche tecniche critiche (rinnovi, scadenze).">i</button>
+                </label>
+                <input class="field-input" type="email" id="email_backup" name="email_backup" autocomplete="off"
+                  placeholder="backup@esempio.com" inputmode="email">
+                <div class="field-error" id="email_backup_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Secondo telefono -->
+              <div class="field-wrap">
+                <label class="field-label" for="secondo_telefono">
+                  Secondo numero di telefono
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Un numero di telefono secondario o alternativo da utilizzare in caso di irreperibilità sul principale.">i</button>
+                </label>
+                <input class="field-input" type="tel" id="secondo_telefono" name="secondo_telefono" autocomplete="off"
+                  placeholder="+39 333 9876543" inputmode="tel">
+                <div class="field-error" id="secondo_telefono_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Instagram / Social -->
+              <div class="field-wrap">
+                <label class="field-label" for="social">
+                  Instagram o altri social
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="I riferimenti dei canali social o profili digitali che utilizzi per la tua attività o brand.">i</button>
+                </label>
+                <input class="field-input" type="text" id="social" name="social" autocomplete="off"
+                  placeholder="@nomeutente o URL profilo">
+                <div class="field-error" id="social_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Persona di contatto interna (ente) -->
+              <div class="field-wrap show-entity hidden-field" id="wrap_contatto_interno">
+                <label class="field-label" for="contatto_interno">
+                  Referente operativo interno
+                  <button type="button" class="info-btn" aria-label="Informazioni" data-help="Il nome del referente interno (es. responsabile marketing o tech) con cui lavoreremo operativamente sul progetto.">i</button>
+                </label>
+                <input class="field-input" type="text" id="contatto_interno" name="contatto_interno" autocomplete="name"
+                  placeholder="Nome e ruolo interno">
+                <p class="field-hint">Il referente con cui lavoreremo operativamente</p>
+                <div class="field-error" id="contatto_interno_error" role="alert" hidden></div>
+              </div>
+
+              <!-- Note aggiuntive -->
+              <div class="field-wrap field-full">
+                <label class="field-label" for="note">Note aggiuntive</label>
+                <textarea class="field-textarea" id="note" name="note"
+                  placeholder="Qualsiasi informazione aggiuntiva sulla persona, l'attività o il progetto..." rows="4"
+                  autocomplete="off"></textarea>
+                <div class="field-error" id="note_error" role="alert" hidden></div>
+              </div>
+
+            </div>
+
+            <!-- Mandato tecnico -->
+            <div class="mandate-block">
+              <label class="consent-item" for="mandato_tecnico">
+                <input type="checkbox" class="consent-check" id="mandato_tecnico" name="mandato_tecnico">
+                <span class="consent-box" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <span class="consent-text">
+                  <strong>Autorizzo la gestione tecnica del dominio.</strong>
+                  Autorizzo Azza Studio ad agire come referente tecnico presso il registrar per la registrazione, il trasferimento e la configurazione del dominio indicato.
+                  <span class="show-mandato-req" style="display:none;" aria-label="campo obbligatorio"> <span class="required-mark">*</span></span>
+                </span>
+              </label>
+              <div class="field-error" id="mandato_tecnico_error" role="alert" hidden></div>
+            </div>
+
+            <!-- Nota documenti allegati -->
+            <div class="documents-note reveal-up">
+              <div class="doc-note-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                </svg>
+              </div>
+              <div>
+                <p class="doc-note-title">Documenti allegati</p>
+                <p class="doc-note-body">Eventuali documenti di identità, visure camerali o altri allegati potranno
+                  essere inviati successivamente via email a <a
+                    href="mailto:azzastudio@proton.me">azzastudio@proton.me</a>, se necessari per la predisposizione del
+                  contratto.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===========================
+               BLOCCO E: CONSENSI / CONFERMA
+               =========================== -->
+          <div class="form-block" id="consensi">
+            <div class="block-header">
+              <span class="block-num">E</span>
+              <div>
+                <h2 class="block-title">Conferma e consensi</h2>
+                <p class="block-desc">Ogni informazione viene utilizzata esclusivamente per finalità operative, contrattuali e organizzative, nel rispetto del GDPR.</p>
+              </div>
+            </div>
+
+            <div class="consent-group">
+              <!-- 1. Veridicità -->
+              <label class="consent-item" for="consenso_veridicita">
+                <input type="checkbox" class="consent-check" id="consenso_veridicita" name="consenso_veridicita" required>
+                <span class="consent-box" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <span class="consent-text">
+                  <strong>Confermo la veridicità dei dati inseriti.</strong> Dichiaro che tutte le informazioni fornite sono veritiere, complete e aggiornate. <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                </span>
+              </label>
+              <div class="field-error" id="consenso_veridicita_error" role="alert" hidden></div>
+
+              <!-- 2. Informativa Privacy -->
+              <label class="consent-item" for="consenso_privacy">
+                <input type="checkbox" class="consent-check" id="consenso_privacy" name="consenso_privacy" required>
+                <span class="consent-box" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <span class="consent-text">
+                  <strong>Presa visione dell'Informativa Privacy (GDPR).</strong> Prendo atto che i dati forniti saranno trattati da Azza Studio esclusivamente per finalità contrattuali, operative e amministrative, nel rispetto del Regolamento (UE) 2016/679. <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                </span>
+              </label>
+              <div class="field-error" id="consenso_privacy_error" role="alert" hidden></div>
+
+              <!-- 3. Clausole vessatorie -->
+              <label class="consent-item" for="consenso_condizioni">
+                <input type="checkbox" class="consent-check" id="consenso_condizioni" name="consenso_condizioni" required>
+                <span class="consent-box" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <span class="consent-text">
+                  <strong>Approvazione specifica delle clausole contrattuali.</strong> Ai sensi degli artt. 1341-1342 c.c., dichiaro di aver letto, compreso e di approvare espressamente le condizioni generali di contratto e le eventuali clausole che potrebbero essere qualificate come vessatorie. <span class="required-mark" aria-label="campo obbligatorio">*</span>
+                </span>
+              </label>
+              <div class="field-error" id="consenso_condizioni_error" role="alert" hidden></div>
+            </div>
+
+            <!-- Submit -->
+            <div class="submit-area">
+              <button type="submit" class="btn btn-primary btn-submit" id="submitBtn" aria-describedby="submitHint">
+                <span class="btn-text">Invia scheda cliente</span>
+                <span class="btn-loader" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spinner">
+                    <circle cx="12" cy="12" r="10" opacity="0.25" />
+                    <path d="M12 2a10 10 0 0 1 10 10" opacity="0.75" />
+                  </svg>
+                </span>
+                <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+              <p class="submit-hint" id="submitHint">I campi contrassegnati con <span class="required-mark" aria-hidden="true">*</span> sono obbligatori.</p>
+            </div>
+
+          </div>
+
+        </form>
+      </div><!-- /.form-main -->
+    </div><!-- /.form-container -->
+  </section>
+
+  <!-- ============================
+       SUCCESS STATE
+       ============================ -->
+  <div class="success-overlay" id="successOverlay" aria-live="polite" aria-atomic="true" hidden>
+    <div class="success-content">
+      <div class="success-icon" aria-hidden="true">
+        <svg viewBox="0 0 60 60" fill="none">
+          <circle class="success-circle" cx="30" cy="30" r="28" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+          <circle class="success-circle-fill" cx="30" cy="30" r="28" stroke="white" stroke-width="1.5"
+            stroke-dasharray="176" stroke-dashoffset="176" />
+          <polyline class="success-check" points="18,30 26,38 42,22" stroke="white" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="40" stroke-dashoffset="40" />
+        </svg>
+      </div>
+      <h2 class="success-title">Scheda inviata.<br><em>Grazie.</em></h2>
+      <p class="success-body">Abbiamo ricevuto tutti i tuoi dati. Il team di Azza Studio li analizzerà e ti contatterà
+        al più presto per confermare l'avvio del progetto.</p>
+      <div class="success-meta" id="successMeta"></div>
+      <a href="https://azzastudio.it" class="btn btn-outline success-cta">Torna al sito principale</a>
+    </div>
+  </div>
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo v2.PNG" alt="Azza Studio" class="footer-logo">
+        <p class="footer-tagline">Architettura digitale di altissimo livello.</p>
+      </div>
+      <div class="footer-info">
+        <p class="footer-privacy">I dati forniti tramite questo modulo sono utilizzati esclusivamente per finalità
+          operative, contrattuali e amministrative da parte di Azza Studio. Non vengono ceduti a terzi né utilizzati per
+          scopi commerciali.</p>
+        <a href="mailto:azzastudio@proton.me" class="footer-email">azzastudio@proton.me</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="currentYear"></span> Azza Studio. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina" hidden>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      aria-hidden="true">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
